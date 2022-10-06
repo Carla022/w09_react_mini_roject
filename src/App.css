@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+/* getting to a tag in a div class */
+/* removing the bulletpoints */
+.App ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+#title-top {
+  border-style: double;
+}
+
