@@ -50,3 +50,9 @@
   border-style: double;
 }
 
+.App {
+  background-color: rgba(67, 5, 252, 0.485);
+}
+.App h1 {
+  font-family:fantasy;
+}

@@ -10,8 +10,11 @@ const CharacterList = ({characters}) => {
 
     return (
         <>
-        <h3>Guess The Disney Character Name</h3>
         <hr />
+        <h3>Guess The Disney Character Name</h3>
+        <br/>
+        <br/>
+        <br/>
         {characterComponents}
         </>
     )

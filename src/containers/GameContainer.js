@@ -1,3 +1,4 @@
+import GameForm from "../components/GameForm";
 import CharacterList from "../components/CharacterList";
 import { useState, useEffect } from "react"; 
 import {BrowserRouter, Router, Route, Link, Routes} from 'react-router-dom';
@@ -45,17 +46,35 @@ const GameContainer = () => {
 
         <ul>
             <li>
-                <Link to="/all-characters">All Characters</Link>
+                <Link to="/round1">Round 1</Link>
+            </li>
+            <li>
+                <Link to="/round2">Round 2</Link>
+            </li>
+            <li>
+                <Link to="/round3">Round 3</Link>
             </li>
         </ul>
 
         <Routes>
-            <Route path="/all-characters" element={
+            <Route path="/round1" element={
                 <CharacterList 
-                characters={characters}
+                    characters={characters}
+                />}
+            /> 
 
-            />} 
-        />
+            <Route path="/round2" element={
+                <CharacterList 
+                    characters={characters}
+                />}
+            /> 
+
+            <Route path="/round3" element={
+                <CharacterList 
+                    characters={characters}
+                />}
+            /> 
+
         </Routes>
 
 
