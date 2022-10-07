@@ -44,14 +44,21 @@
   display: inline-block;
   margin: 0.5em;
   padding: 0.5em;
+  ;
+}
+
+.App ul li:visited {
+  color: #000;
 }
 
 #title-top {
-  border-style: double;
+  border: 6px double #000 ;
+  background-color: white;
+  border-color: black;
 }
 
 .App {
-  background-color: rgba(67, 5, 252, 0.485);
+  background-color: rgba(42, 0, 169, 0.656);
 }
 .App h1 {
   font-family:fantasy;

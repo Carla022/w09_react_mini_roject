@@ -5,7 +5,9 @@ const CharacterList = ({characters}) => {
     const characterComponents = characters.map((character, index)  => {
         return <Character
                 key={index}
-                character={character}/>
+                character={character}
+            />
+            
     })
 
     return (
