@@ -1,27 +1,27 @@
-import Round1List from "../components/Round1List";
-import {BrowserRouter, } from 'react-router-dom';
+import CharacterList from "../components/CharacterList";
+import { useState, useEffect } from "react"; 
+import {BrowserRouter, Router, Route, Link, Routes} from 'react-router-dom';
 
 
 
 const GameContainer = () => {
 
+    const [characters, setCharacters] = useState ([]) 
 
+    const fetchData = async () => {
+        const response = await fetch("https://api.disneyapi.dev/characters");
+        const data = await response.json();
+        setCharacters(data.data);
+        console.log(data);
+    }
 
+    useEffect(() => {
+        fetchData()
+    }, [])
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    const beginBtn = () => {
+        console.log("hello world");
+    }
     
 
     return (
@@ -40,8 +40,26 @@ const GameContainer = () => {
           <p><b>Round 1: Guess The Name</b> - Look at the image and guess the name of the character, click "done".</p>
           <p><b>Round 2: Guess The TV Show</b> - Read the question and select the correct option, click "done".</p>
           <p><b>Round 3 (Final): Guess How Many Films</b> - Read the question and input correct quantity, click "done".</p>
-          {/* <button onClick>Begin!</button>  */}
+          <button onClick = {beginBtn}>Begin!</button> 
         </div>
+
+        <ul>
+            <li>
+                <Link to="/all-characters">All Characters</Link>
+            </li>
+        </ul>
+
+        <Routes>
+            <Route path="/all-characters" element={
+                <CharacterList 
+                characters={characters}
+
+            />} 
+        />
+        </Routes>
+
+
+        
         
 
 

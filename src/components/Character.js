@@ -4,7 +4,7 @@ const Character = ({character}) => {
 
     return (
         <>
-        {character.url}
+        <img src={character.imageUrl} />
         </>
     )
 
